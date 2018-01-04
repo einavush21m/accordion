@@ -1,0 +1,79 @@
+<html>
+    <head>
+     <script
+  src="https://code.jquery.com/jquery-3.2.1.min.js"
+  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous"></script>
+            
+        <script>
+       
+        
+        $(function(){//like  "main" in c
+            function handleClickEvent()
+            {
+             alert("h1 clicked!");
+              $("h1").css("color","red");
+
+            }
+               function handleClickupEvent()
+            {
+              $("h1").css("color","black");
+
+            }
+                 function handleClickdownEvent()
+            {
+              $("h1").css("color","red");
+
+            }
+            $(".showingfo").on("click",function(){
+               $("p").not($(this).next()).hide();//shutdown button
+                $(this).next().toggle();
+            })
+            $("h1").on("mouseup",handleClickupEvent);
+          $("h1").on("mousedown",handleClickdownEvent);
+
+            
+          //$("h1").on("click",handleClickEvent);
+          //$("h1").css("color","red");
+           // $("h1").on("click",function(){
+               // alert("h1 clicked!");
+                //more stuff i want to do
+            //});-->
+          });   
+        </script>
+         <style>
+        section {
+            border: 1px solid black;
+            
+        }
+             p
+             {
+                 
+                display: none;
+            
+             }
+                 </style>
+    
+    </head>
+    <body>
+        <!--<h1>   hello world</h1>-->
+
+        
+         <section>
+            <button class="showingfo">toggle more information</button> 
+            <p >
+                        showing the latest stable in each major 
+               </p> 
+            </section>
+        
+                <section>
+        <button class="showingfo">toggle more information</button> 
+            <p style="display:none">
+                        showing the latest stable in each major 
+               </p>
+                    </section>
+    
+       
+    </body>
+
+</html>
